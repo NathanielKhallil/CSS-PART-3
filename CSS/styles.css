@@ -30,7 +30,8 @@ body {
 
 h1,
 h2,
-h3 {
+h3,
+h4 {
   color: var(--color-headings);
   margin-bottom: 1rem;
   line-height: 1.1;
@@ -46,6 +47,9 @@ h2 {
 
 h3 {
   font-size: 3rem;
+}
+h4 {
+  font-size: 2rem;
 }
 
 p {
@@ -65,8 +69,10 @@ p {
   h3 {
     font-size: 2.4rem;
   }
+  h4 {
+    font-size: 2rem;
+  }
 }
-
 /* Links */
 
 a {
@@ -179,7 +185,6 @@ a {
   fill: white;
 }
 
-/* single hyphen to separate words*/
 .icon-container {
   background: #f3f9fa;
   width: 64px;
@@ -623,6 +628,10 @@ a {
   color: white;
 }
 
+.block--accent {
+  color: var(--color-accent);
+}
+
 .block--skewed--right {
   padding-bottom: calc(var(--padding-vertical) + 4rem);
   clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 0% 80%);
@@ -763,4 +772,29 @@ a {
 .block-plans .card {
   max-width: 500px;
   margin: 0 auto;
+}
+
+/* Feature */
+
+.feature {
+  gap: 4rem 2rem;
+  margin: 12rem 0;
+}
+
+.feature:first-of-type {
+  margin-top: 6rem;
+}
+
+.feature__heading {
+  margin: 1rem 0;
+}
+
+.feature__image {
+  width: 100%;
+}
+
+@media screen and (min-width: 768px) {
+  .feature:nth-of-type(even) .feature__content {
+    order: 2;
+  }
 }
