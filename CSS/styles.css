@@ -598,7 +598,7 @@ a {
   max-height: 0;
   overflow: hidden;
   opacity: 0;
-  transition: all 0.3s;
+  transition: all 0.4s ease;
 }
 
 .collapsible--expanded .collapsible__chevron {
@@ -877,10 +877,12 @@ a {
   .footer .collapsible__chevron {
     display: none;
   }
-  .footer .collapsible__chevron {
+
+  .collapsible__content {
+    max-height: 100vh;
     opacity: 1;
-    max-height: 100%;
   }
+
   .brand__footer {
     order: -1;
     margin-top: 1rem;
