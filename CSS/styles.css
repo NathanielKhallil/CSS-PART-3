@@ -214,7 +214,7 @@ a {
   font-weight: 600;
   margin: 1rem 0;
   outline: 0;
-  padding: 2rem 3rem;
+  padding: 2rem 4vw;
   text-align: center;
   text-transform: uppercase;
   white-space: nowrap;
@@ -310,6 +310,7 @@ a {
   border: 0;
   flex-grow: 1;
   padding: 1.5rem 2rem;
+  width: 0;
 }
 
 .input-group .btn {
@@ -537,9 +538,24 @@ a {
 
 /* Callouts */
 
+.container__callout {
+  position: relative;
+  width: 80%;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.container__callout p {
+  font-size: 1.7rem;
+}
+
 .callout {
+  position: absolute;
+  display: inline-flex;
   padding: 4rem;
+  width: 100%;
   border-radius: 5px;
+  bottom: -220px;
 }
 
 .callout--primary {
@@ -555,14 +571,26 @@ a {
 
 .callout__content {
   text-align: center;
+  justify-content: center;
 }
 
 .callout .btn {
-  justify-self: center;
   align-self: center;
 }
 
 @media screen and (min-width: 768px) {
+  .callout {
+    position: absolute;
+    display: inline-flex;
+    padding: 4rem;
+    width: 100%;
+    border-radius: 5px;
+    bottom: -120px;
+  }
+  .container__callout p {
+    font-size: 1.5rem;
+  }
+
   .callout .grid--1x2 {
     grid-template-columns: 1fr auto;
   }
@@ -752,8 +780,9 @@ a {
 }
 
 .block-domain__prices {
+  color: var(--color-headings);
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: repeat(2, 1fr);
   grid-template-rows: repeat(2, 6rem);
   font-size: 2rem;
   font-weight: 700;
@@ -828,6 +857,7 @@ a {
 
 .footer {
   background: rgb(23, 23, 23);
+  padding-top: 30rem;
 }
 
 .footer a {
@@ -871,6 +901,11 @@ a {
 }
 
 @media screen and (min-width: 768px) {
+  .footer {
+    background: rgb(23, 23, 23);
+    padding-top: 20rem;
+  }
+
   .footer__grid {
     grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
   }
