@@ -20,14 +20,13 @@
       href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800;900&display=swap"
       rel="stylesheet"
     />
-    <link rel="stylesheet" href="/CSS/normalize.css" />
     <link rel="stylesheet" href="/CSS/styles.css" />
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
   </head>
   <body>
     <header>
       <nav class="nav collapsible collapsible--expanded">
-        <a class="nav__brand" href="/"
+        <a aria-label="Moshify" class="nav__brand" href="/"
           ><img src="/images/logo.svg" alt="Moshify Logo"
         /></a>
         <svg class="icon icon--white nav__toggler">
@@ -78,6 +77,7 @@
       </header>
       <div class="input-group">
         <input
+          aria-label="Domain"
           class="input"
           type="text"
           placeholder="Enter domain name here..."
